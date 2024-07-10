@@ -1,0 +1,1991 @@
+############################## NEW RUN ##############################
+2024-07-10 13:06:56,167 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): ec2-100-25-169-219.compute-1.amazonaws.com:8123
+2024-07-10 13:06:56,428 - urllib3.connectionpool - DEBUG - http://ec2-100-25-169-219.compute-1.amazonaws.com:8123 "POST /?database=zast&query=insert+into+zast.log+%28timestamp%2C+kind%2C+file%2C+class%2C+exception_type%2C+stack_trace%2C+message%2C+host%2C+session_id%29+values+%28+1720609616.166366%2C+5%2C+%27decorators.py%27%2C+%27decorators%27%2C+%27NotADirectoryError%27%2C+NULL%2C+%27%5BErrno+20%5D+Not+a+directory%3A+%2Fhome%2Fgianfranco%2FGitHub%2FTenderly-war-room-games-EthCC-7-solutions%2Fsrc%2F3-MultiCall.sol%27%2C+%27GianfrancoX1%27%2C+%27GianfrancoX1_4979807f6d%27+%29&session_id=GianfrancoX1_4979807f6d&wait_end_of_query=1 HTTP/1.1" 200 None
+2024-07-10 13:06:56,166 - zast - ERROR - [Errno 20] Not a directory: '/home/gianfranco/GitHub/Tenderly-war-room-games-EthCC-7-solutions/src/3-MultiCall.sol'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+        ^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 47, in enrich
+    ] in self.get_folder_files_and_folders(codebase.project_root):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 202, in get_folder_files_and_folders
+    with os.scandir(path) as entries:
+         ^^^^^^^^^^^^^^^^
+NotADirectoryError: [Errno 20] Not a directory: '/home/gianfranco/GitHub/Tenderly-war-room-games-EthCC-7-solutions/src/3-MultiCall.sol'
+2024-07-10 13:06:56,431 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-erc4337-compatibility
+2024-07-10 13:06:56,431 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: lack-of-spdx-license-identifier
+2024-07-10 13:06:56,431 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: revert-missing-message
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: overriding-state-values-in-constructor
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: angelic-suggestion
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: external-call-reentrancy-attack-vector
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unchecked-math
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: identify-hardhat-console-import
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unicode-direction-control
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: trust-assumptions
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: not-operator-assembly
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unchecked-keyword
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: call-with-arbitrary-address-bytes
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: require-missing-message
+2024-07-10 13:06:56,432 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: create2-usage
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: doc-code-mismatch-model
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: hashing-dynamic-values
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: identify-foundry-console-import
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: tx-origin-usage
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: misspellings
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: use-of-transfer-send
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: function-level-access-control-model
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: alert-uniswap-v2-router-liquidity-considerations
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: int-negative-evaluation-overflow
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: use-of-uint-instead-of-uint256
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: sushiswap-callback-attack
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: multiple-contracts-per-file
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: require-instead-of-revert
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: possible-return-bomb
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-effect-interact
+2024-07-10 13:06:56,433 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: function-level-reentrancy-model
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: missing-initializer-modifier
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: pragma-spans-breaking-changes
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-return-data-from-external-call
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: outdated-solidity-version
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: possible-incorrect-abi-decode
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: disableinitializers-not-called-in-implementation-constructor
+2024-07-10 13:06:56,434 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule address-code-potential-misuse: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/address_code_potential_misuse.py", line 14, in _run_execute
+    for contract in codebase.contracts:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,436 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule address-code-potential-misuse but don't worry, this was recorded
+2024-07-10 13:06:56,436 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule arbitrary-send-eth: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/arbitrary_send_eth.py", line 24, in _run_execute
+    for contract in codebase.contracts:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,438 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule arbitrary-send-eth but don't worry, this was recorded
+2024-07-10 13:06:56,439 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule bugs-in-solidity-version: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/bugs_in_solidity_version.py", line 19, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,440 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule bugs-in-solidity-version but don't worry, this was recorded
+2024-07-10 13:06:56,440 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: calldata-instead-of-memory
+2024-07-10 13:06:56,440 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule chainlink-deprecated-functions: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/chainlink_deprecated_functions.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,441 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule chainlink-deprecated-functions but don't worry, this was recorded
+2024-07-10 13:06:56,441 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule check-consistent-usage-of-msgsender-msgdata: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/check_consistent_usage_of_msgsender_msgdata.py", line 33, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,442 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule check-consistent-usage-of-msgsender-msgdata but don't worry, this was recorded
+2024-07-10 13:06:56,442 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: code-length-optimization
+2024-07-10 13:06:56,442 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule conflicting-names: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/conflicting_names.py", line 17, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,443 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule conflicting-names but don't worry, this was recorded
+2024-07-10 13:06:56,443 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule constants-not-using-proper-format: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/constants_not_using_proper_format.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,444 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule constants-not-using-proper-format but don't worry, this was recorded
+2024-07-10 13:06:56,444 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule dangerous-strict-equality: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/dangerous_strict_equality.py", line 15, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,445 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule dangerous-strict-equality but don't worry, this was recorded
+2024-07-10 13:06:56,445 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: default-values-assigned
+2024-07-10 13:06:56,445 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule delegatecall-inside-loop: 'NoneType' object has no attribute 'functions'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/delegatecall_inside_loop.py", line 18, in _run_execute
+    lambda f: f.mutability == Mutability.PAYABLE, codebase.functions
+                                                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'functions'
+2024-07-10 13:06:56,446 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule delegatecall-inside-loop but don't worry, this was recorded
+2024-07-10 13:06:56,446 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule delegatecall-to-arbitrary-address: 'NoneType' object has no attribute 'functions'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/delegatecall_to_arbitrary_address.py", line 16, in _run_execute
+    codebase.functions,
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'functions'
+2024-07-10 13:06:56,447 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule delegatecall-to-arbitrary-address but don't worry, this was recorded
+2024-07-10 13:06:56,447 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule different-pragma-directives: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/different_pragma_directives.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,448 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule different-pragma-directives but don't worry, this was recorded
+2024-07-10 13:06:56,448 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule dos-vulnerable-call: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/dos_vulnerable_call.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,448 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule dos-vulnerable-call but don't worry, this was recorded
+2024-07-10 13:06:56,448 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule duplicate-event-emission: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/duplicate_event_emission.py", line 13, in _run_execute
+    for contract in codebase.contracts:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,449 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule duplicate-event-emission but don't worry, this was recorded
+2024-07-10 13:06:56,449 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule duplicated-import: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/duplicated_import.py", line 16, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,449 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule duplicated-import but don't worry, this was recorded
+2024-07-10 13:06:56,449 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule erc1155-safetransferfrom-missing-safety-checks: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/erc1155_safetransferfrom_missing_safety_checks.py", line 19, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,450 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule erc1155-safetransferfrom-missing-safety-checks but don't worry, this was recorded
+2024-07-10 13:06:56,450 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule erc2771-context-spoofing: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/erc2771_context_spoofing.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,450 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule erc2771-context-spoofing but don't worry, this was recorded
+2024-07-10 13:06:56,450 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule erc721-safetransferfrom-missing-safety-checks: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/erc721_safetransferfrom_missing_safety_checks.py", line 25, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,451 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule erc721-safetransferfrom-missing-safety-checks but don't worry, this was recorded
+2024-07-10 13:06:56,451 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule experimental-pragma: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/experimental_pragma.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,451 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule experimental-pragma but don't worry, this was recorded
+2024-07-10 13:06:56,451 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule fallback-with-return-value: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/fallback_with_return_value.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,451 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule fallback-with-return-value but don't worry, this was recorded
+2024-07-10 13:06:56,451 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule file-contract-name-mismatch: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/file_contract_name_mismatch.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,452 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule file-contract-name-mismatch but don't worry, this was recorded
+2024-07-10 13:06:56,452 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule floating-pragma: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/floating_pragma.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,452 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule floating-pragma but don't worry, this was recorded
+2024-07-10 13:06:56,452 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule function-init-state-variable: 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/function_init_state_variable.py", line 11, in _run_execute
+    state_variables_init_function = codebase.find(
+                                    ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+2024-07-10 13:06:56,452 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule function-init-state-variable but don't worry, this was recorded
+2024-07-10 13:06:56,452 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule function-selector-clash: 'NoneType' object has no attribute 'functions'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/function_selector_clash.py", line 17, in _run_execute
+    for function in codebase.functions:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'functions'
+2024-07-10 13:06:56,453 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule function-selector-clash but don't worry, this was recorded
+2024-07-10 13:06:56,457 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule function-selector-clash-with-common: 'NoneType' object has no attribute 'functions'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/function_selector_clash_with_common.py", line 29, in _run_execute
+    for function in codebase.functions:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'functions'
+2024-07-10 13:06:56,458 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule function-selector-clash-with-common but don't worry, this was recorded
+2024-07-10 13:06:56,458 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: function-visibility-too-broad
+2024-07-10 13:06:56,458 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule gas-limit-on-call: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/gas_limit_on_call.py", line 12, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,458 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule gas-limit-on-call but don't worry, this was recorded
+2024-07-10 13:06:56,458 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule hardcoded-address: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/hardcoded_address.py", line 15, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule hardcoded-address but don't worry, this was recorded
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule identify-magic-number: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/identify_magic_number.py", line 16, in _run_execute
+    for contract in codebase.contracts:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule identify-magic-number but don't worry, this was recorded
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: identify-solmate-import
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule identify-to-do-comments: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/identify_to_do_comments.py", line 18, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule identify-to-do-comments but don't worry, this was recorded
+2024-07-10 13:06:56,459 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule identify-use-safe-transfer-lib-solmate: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/identify_use_safe_transfer_lib_solmate.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,460 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule identify-use-safe-transfer-lib-solmate but don't worry, this was recorded
+2024-07-10 13:06:56,460 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule immutable-variables-not-explicitly-set-in-constructor: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/immutable_variables_not_explicitly_set_in_constructor.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,460 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule immutable-variables-not-explicitly-set-in-constructor but don't worry, this was recorded
+2024-07-10 13:06:56,460 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incompatible-erc7201-storage-layout: 'NoneType' object has no attribute 'pure_contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incompatible_erc7201_storage_layout.py", line 12, in _run_execute
+    for contract in codebase.pure_contracts + codebase.abstract_contracts:
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'pure_contracts'
+2024-07-10 13:06:56,460 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incompatible-erc7201-storage-layout but don't worry, this was recorded
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incomplete-docstring: 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incomplete_docstring.py", line 19, in _run_execute
+    events_with_docstring: List[Event] = codebase.find(
+                                         ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incomplete-docstring but don't worry, this was recorded
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule inconsistent-cap-words-style: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/inconsistent_cap_words_style.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule inconsistent-cap-words-style but don't worry, this was recorded
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule inconsistent-integer-base: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/inconsistent_integer_base.py", line 42, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule inconsistent-integer-base but don't worry, this was recorded
+2024-07-10 13:06:56,461 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule inconsistent-order-contract: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/inconsistent_order_contract.py", line 34, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,462 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule inconsistent-order-contract but don't worry, this was recorded
+2024-07-10 13:06:56,462 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule inconsistent-use-named-returns: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/inconsistent_use_named_returns.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,462 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule inconsistent-use-named-returns but don't worry, this was recorded
+2024-07-10 13:06:56,462 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incorrect-erc7201-implementation: 'NoneType' object has no attribute 'pure_contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incorrect_erc7201_implementation.py", line 19, in _run_execute
+    for contract in codebase.pure_contracts + codebase.abstract_contracts:
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'pure_contracts'
+2024-07-10 13:06:56,462 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incorrect-erc7201-implementation but don't worry, this was recorded
+2024-07-10 13:06:56,462 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incorrect-exponentiation: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incorrect_exponentiation.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,463 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incorrect-exponentiation but don't worry, this was recorded
+2024-07-10 13:06:56,463 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incorrect-format-onERC721Received: 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incorrect_format_onERC721Received.py", line 15, in _run_execute
+    functions = codebase.find(
+                ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+2024-07-10 13:06:56,463 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incorrect-format-onERC721Received but don't worry, this was recorded
+2024-07-10 13:06:56,566 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incorrect-implementation-interface: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incorrect_implementation_interface.py", line 18, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,567 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incorrect-implementation-interface but don't worry, this was recorded
+2024-07-10 13:06:56,567 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incorrect-modifier: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incorrect_modifier.py", line 12, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,567 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incorrect-modifier but don't worry, this was recorded
+2024-07-10 13:06:56,567 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule incorrect-shr: 'NoneType' object has no attribute 'functions'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/incorrect_shr.py", line 13, in _run_execute
+    for function in codebase.functions:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'functions'
+2024-07-10 13:06:56,568 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule incorrect-shr but don't worry, this was recorded
+2024-07-10 13:06:56,568 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: incremental-update-optimization
+2024-07-10 13:06:56,568 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule indecisive-license: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/indecisive_license.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,568 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule indecisive-license but don't worry, this was recorded
+2024-07-10 13:06:56,664 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule interface-implementation-mismatch: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/interface_implementation_mismatch.py", line 20, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,664 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule interface-implementation-mismatch but don't worry, this was recorded
+2024-07-10 13:06:56,664 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule is-contract-potential-misuse: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/is_contract_potential_misuse.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule is-contract-potential-misuse but don't worry, this was recorded
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule lack-of-gap-variable: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/lack_of_gap_variable.py", line 17, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule lack-of-gap-variable but don't worry, this was recorded
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule lack-of-indexed-event-parameters: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/lack_of_indexed_event_parameters.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule lack-of-indexed-event-parameters but don't worry, this was recorded
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule lack-of-security-contact: 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/lack_of_security_contact.py", line 14, in _run_execute
+    contracts_missing_security_contact = codebase.find(
+                                         ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule lack-of-security-contact but don't worry, this was recorded
+2024-07-10 13:06:56,665 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule lock-ether: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/lock_ether.py", line 15, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule lock-ether but don't worry, this was recorded
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule manipulable-source-of-randomness: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/manipulable_source_of_randomness.py", line 18, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule manipulable-source-of-randomness but don't worry, this was recorded
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule memory-side-effect-assembly: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/memory_side_effect_assembly.py", line 50, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule memory-side-effect-assembly but don't worry, this was recorded
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule missing-assertion-in-relational-operation: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/missing_assertion_in_relational_operation.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule missing-assertion-in-relational-operation but don't worry, this was recorded
+2024-07-10 13:06:56,666 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule missing-docstrings: 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/missing_docstrings.py", line 14, in _run_execute
+    state_variables_missing_docstring = codebase.find(
+                                        ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule missing-docstrings but don't worry, this was recorded
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule missing-erc7201-annotation: 'NoneType' object has no attribute 'pure_contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/missing_erc7201_annotation.py", line 18, in _run_execute
+    for contract in codebase.pure_contracts + codebase.abstract_contracts:
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'pure_contracts'
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule missing-erc7201-annotation but don't worry, this was recorded
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule missing-mapping-named-parameters: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/missing_mapping_named_parameters.py", line 19, in _run_execute
+    codebase.files,
+    ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule missing-mapping-named-parameters but don't worry, this was recorded
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule missing-return: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/missing_return.py", line 12, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule missing-return but don't worry, this was recorded
+2024-07-10 13:06:56,667 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule missing-zero-address-check: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/missing_zero_address_check.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,668 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule missing-zero-address-check but don't worry, this was recorded
+2024-07-10 13:06:56,668 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule misuse-boolean-literal: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/misuse_boolean_literal.py", line 19, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,668 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule misuse-boolean-literal but don't worry, this was recorded
+2024-07-10 13:06:56,668 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule msg-value-loop: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/msg_value_loop.py", line 12, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,668 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule msg-value-loop but don't worry, this was recorded
+2024-07-10 13:06:56,668 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule name-reused: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/name_reused.py", line 14, in _run_execute
+    map(lambda contract: contract.name, codebase.contracts)
+                                        ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule name-reused but don't worry, this was recorded
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule non-explicit-imports: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/non_explicit_imports.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule non-explicit-imports but don't worry, this was recorded
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule obsolete-safe-approve: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/obsolete_safe_approve.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule obsolete-safe-approve but don't worry, this was recorded
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule precision-loss-div-before-mul: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/precision_loss_div_before_mul.py", line 15, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule precision-loss-div-before-mul but don't worry, this was recorded
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: redundant-getter
+2024-07-10 13:06:56,669 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule require-multiple-conditions: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/require_multiple_conditions.py", line 12, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule require-multiple-conditions but don't worry, this was recorded
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule shadow-argument: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/shadow_argument.py", line 11, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule shadow-argument but don't worry, this was recorded
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule shadow-builtin: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/shadow_builtin.py", line 53, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule shadow-builtin but don't worry, this was recorded
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule shadow-state-variable: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/shadow_state_variable.py", line 11, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule shadow-state-variable but don't worry, this was recorded
+2024-07-10 13:06:56,670 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule similar-names: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/similar_names.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule similar-names but don't worry, this was recorded
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule state-updated-without-event: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/state_updated_without_event.py", line 11, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule state-updated-without-event but don't worry, this was recorded
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule state-var-visibility-not-explicitly-declared: 'NoneType' object has no attribute 'state_variables'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/state_var_visibility_not_explicitly_declared.py", line 13, in _run_execute
+    for sv in codebase.state_variables:
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'state_variables'
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule state-var-visibility-not-explicitly-declared but don't worry, this was recorded
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule swapped-arguments-function-call: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/swapped_arguments_function_call.py", line 25, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,671 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule swapped-arguments-function-call but don't worry, this was recorded
+2024-07-10 13:06:56,672 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule too-many-digits: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/too_many_digits.py", line 22, in _run_execute
+    for contract in codebase.contracts:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,672 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule too-many-digits but don't worry, this was recorded
+2024-07-10 13:06:56,672 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule transferfrom-dangerous-from: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/transferfrom_dangerous_from.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,672 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule transferfrom-dangerous-from but don't worry, this was recorded
+2024-07-10 13:06:56,672 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unchecked-call-success: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unchecked_call_success.py", line 32, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unchecked-call-success but don't worry, this was recorded
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: unchecked-increment
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unchecked-transfer: 'NoneType' object has no attribute 'functions'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unchecked_transfer.py", line 15, in _run_execute
+    for function in codebase.functions:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'functions'
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unchecked-transfer but don't worry, this was recorded
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule uninitialized-local-variable: 'NoneType' object has no attribute 'contracts'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/uninitialized_local_variable.py", line 16, in _run_execute
+    for contract in codebase.contracts:
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'contracts'
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule uninitialized-local-variable but don't worry, this was recorded
+2024-07-10 13:06:56,673 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unnecessary-assignment: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unnecessary_assignment.py", line 12, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unnecessary-assignment but don't worry, this was recorded
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unnecessary-cast: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unnecessary_cast.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unnecessary-cast but don't worry, this was recorded
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unnecessary-unchecked-increment: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unnecessary_unchecked_increment.py", line 19, in _run_execute
+    codebase.files,
+    ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unnecessary-unchecked-increment but don't worry, this was recorded
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unsafe-abi-encoding: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unsafe_abi_encoding.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unsafe-abi-encoding but don't worry, this was recorded
+2024-07-10 13:06:56,674 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unsafe-casting: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unsafe_casting.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unsafe-casting but don't worry, this was recorded
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unsafe-mint-ERC721: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unsafe_mint_ERC721.py", line 11, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unsafe-mint-ERC721 but don't worry, this was recorded
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-arguments: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_arguments.py", line 15, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-arguments but don't worry, this was recorded
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-enum: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_enum.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-enum but don't worry, this was recorded
+2024-07-10 13:06:56,675 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-enum-type: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_enum_type.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-enum-type but don't worry, this was recorded
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-error: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_error.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-error but don't worry, this was recorded
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-event: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_event.py", line 13, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-event but don't worry, this was recorded
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-function: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_function.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-function but don't worry, this was recorded
+2024-07-10 13:06:56,676 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-imports: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_imports.py", line 14, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-imports but don't worry, this was recorded
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-local-variable: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_local_variable.py", line 18, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-local-variable but don't worry, this was recorded
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-named-returns: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_named_returns.py", line 23, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-named-returns but don't worry, this was recorded
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-state-variable: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_state_variable.py", line 11, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-state-variable but don't worry, this was recorded
+2024-07-10 13:06:56,677 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule unused-struct: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/unused_struct.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule unused-struct but don't worry, this was recorded
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule use-of-chainid-in-the-constructor: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/use_of_chainid_in_the_constructor.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule use-of-chainid-in-the-constructor but don't worry, this was recorded
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: variable-could-be-constant
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: variable-could-be-immutable
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule void-constructor-call: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/void_constructor_call.py", line 10, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule void-constructor-call but don't worry, this was recorded
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - Failed to execute rule ambiguous-call-to-parent-contract: 'NoneType' object has no attribute 'files'
+Traceback (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 86, in run
+    rules_responses[rule_name] = self.execute_rule(rule, codebase)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 33, in execute_rule
+    rule_response = rule().execute(codebase)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/__base_zast_rule.py", line 23, in execute
+    raw_finding = self._run_execute(codebase)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/rules/ambiguous_call_to_parent_contract.py", line 11, in _run_execute
+    for file in codebase.files:
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'files'
+2024-07-10 13:06:56,678 - inspector.scanners.zast_scanner.zast_scanner - ERROR - 😞 Failed to execute rule ambiguous-call-to-parent-contract but don't worry, this was recorded
+############################## NEW RUN ##############################
+2024-07-10 13:07:50,528 - zast - WARNING -  import openzeppelin-contracts/contracts/access/Ownable.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 157, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,528 - zast - WARNING -  import openzeppelin-contracts/contracts/token/ERC20/ERC20.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 157, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,528 - zast - WARNING -  import openzeppelin-contracts/contracts/utils/cryptography/MerkleProof.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 157, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,529 - zast - WARNING -  import openzeppelin-contracts/contracts/utils/cryptography/EIP712.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 157, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,529 - zast - WARNING - Relative file import ./ISolvable.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 37, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,535 - zast - WARNING - An appropriate modifier for the ModifierInvocation Ownable was not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_150_set_modifier_invocation_base_match.py", line 36, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,535 - zast - WARNING - An appropriate modifier for the ModifierInvocation EIP712 was not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_150_set_modifier_invocation_base_match.py", line 36, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,535 - zast - WARNING - An appropriate modifier for the ModifierInvocation ERC20 was not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_150_set_modifier_invocation_base_match.py", line 36, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,535 - zast - WARNING - An appropriate modifier for the ModifierInvocation onlyOwner was not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_150_set_modifier_invocation_base_match.py", line 36, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-erc4337-compatibility
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: lack-of-spdx-license-identifier
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: revert-missing-message
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: overriding-state-values-in-constructor
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: angelic-suggestion
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: external-call-reentrancy-attack-vector
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unchecked-math
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: identify-hardhat-console-import
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unicode-direction-control
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: trust-assumptions
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: not-operator-assembly
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unchecked-keyword
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: call-with-arbitrary-address-bytes
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: require-missing-message
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: create2-usage
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: doc-code-mismatch-model
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: hashing-dynamic-values
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: identify-foundry-console-import
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: tx-origin-usage
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: misspellings
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: use-of-transfer-send
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: function-level-access-control-model
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: alert-uniswap-v2-router-liquidity-considerations
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: int-negative-evaluation-overflow
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: use-of-uint-instead-of-uint256
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: sushiswap-callback-attack
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: multiple-contracts-per-file
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: require-instead-of-revert
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: possible-return-bomb
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-effect-interact
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: function-level-reentrancy-model
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: missing-initializer-modifier
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: pragma-spans-breaking-changes
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-return-data-from-external-call
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: outdated-solidity-version
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: possible-incorrect-abi-decode
+2024-07-10 13:07:50,674 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: disableinitializers-not-called-in-implementation-constructor
+2024-07-10 13:07:50,676 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: calldata-instead-of-memory
+2024-07-10 13:07:50,681 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: code-length-optimization
+2024-07-10 13:07:50,682 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: default-values-assigned
+2024-07-10 13:07:50,710 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: function-visibility-too-broad
+2024-07-10 13:07:50,712 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: identify-solmate-import
+2024-07-10 13:07:50,818 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: incremental-update-optimization
+2024-07-10 13:07:50,929 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: redundant-getter
+2024-07-10 13:07:50,939 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: unchecked-increment
+2024-07-10 13:07:50,946 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: variable-could-be-constant
+2024-07-10 13:07:50,946 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: variable-could-be-immutable
+############################## NEW RUN ##############################
+2024-07-10 13:08:03,084 - zast - WARNING -  import openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 157, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:08:03,084 - zast - WARNING - Relative file import ./ISolvable.sol not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_100_set_import_directive_file_ref.py", line 37, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:08:03,089 - zast - WARNING - An appropriate modifier for the ModifierInvocation ERC1967Proxy was not found.
+Stack (most recent call last):
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspect_cli.py", line 5, in <module>
+    sys.exit(main())
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 105, in main
+    ) = execute_scan(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/main.py", line 252, in execute_scan
+    scanner_manager_rules_response = ScannersManager().execute_rules(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 39, in execute_rules
+    output = runner.run(rules, code, project_root, self._logger)
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners_manager.py", line 116, in run
+    return self._scanner.run(
+  File "/home/gianfranco/GitHub/contract-inspector/src/inspector/scanners/zast_scanner/zast_scanner.py", line 57, in run
+    codebase = zast.build_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/utils/decorators.py", line 13, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/zast.py", line 142, in build_api
+    codebase: Codebase = self._api_builder.enrich_api()
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/api_builder.py", line 151, in enrich_api
+    return enrich_factory.get_enricher(Codebase)(self.codebase)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/base_enricher.py", line 26, in f
+    n = step.enrich(n)
+  File "/home/gianfranco/GitHub/zast/build/__editable__.zast-2.5.1-py3-none-any/zast/ast_parsers/data_structure_enrichers/enrich_steps/codebase_150_set_modifier_invocation_base_match.py", line 36, in enrich
+    ZastLogger.get_zast_logger().warning(
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-erc4337-compatibility
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: lack-of-spdx-license-identifier
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: revert-missing-message
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: overriding-state-values-in-constructor
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: angelic-suggestion
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: external-call-reentrancy-attack-vector
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unchecked-math
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: identify-hardhat-console-import
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unicode-direction-control
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: trust-assumptions
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: not-operator-assembly
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: unchecked-keyword
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: call-with-arbitrary-address-bytes
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: require-missing-message
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: create2-usage
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: doc-code-mismatch-model
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: hashing-dynamic-values
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: identify-foundry-console-import
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: tx-origin-usage
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: misspellings
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: use-of-transfer-send
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: function-level-access-control-model
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: alert-uniswap-v2-router-liquidity-considerations
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: int-negative-evaluation-overflow
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: use-of-uint-instead-of-uint256
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: sushiswap-callback-attack
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: multiple-contracts-per-file
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: require-instead-of-revert
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: possible-return-bomb
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-effect-interact
+2024-07-10 13:08:03,232 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: function-level-reentrancy-model
+2024-07-10 13:08:03,233 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: missing-initializer-modifier
+2024-07-10 13:08:03,233 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: pragma-spans-breaking-changes
+2024-07-10 13:08:03,233 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: check-return-data-from-external-call
+2024-07-10 13:08:03,233 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: outdated-solidity-version
+2024-07-10 13:08:03,233 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: possible-incorrect-abi-decode
+2024-07-10 13:08:03,233 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 🔎 Rule requested not found in zast rule set: disableinitializers-not-called-in-implementation-constructor
+2024-07-10 13:08:03,235 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: calldata-instead-of-memory
+2024-07-10 13:08:03,240 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: code-length-optimization
+2024-07-10 13:08:03,241 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: default-values-assigned
+2024-07-10 13:08:03,246 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: function-visibility-too-broad
+2024-07-10 13:08:03,247 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: identify-solmate-import
+2024-07-10 13:08:03,351 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: incremental-update-optimization
+2024-07-10 13:08:03,458 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: redundant-getter
+2024-07-10 13:08:03,464 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: unchecked-increment
+2024-07-10 13:08:03,471 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: variable-could-be-constant
+2024-07-10 13:08:03,471 - inspector.scanners.zast_scanner.zast_scanner - DEBUG - 😞 Rule not requested: variable-could-be-immutable

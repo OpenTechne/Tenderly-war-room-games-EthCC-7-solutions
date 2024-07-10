@@ -17,13 +17,13 @@ contract HelloWorld is Solvable {
     }
 
     function answer(string calldata data) external {
-        bytes32 hash = keccak256(abi.encodePacked(data)); 
+        bytes32 hash = keccak256(abi.encodePacked(data));
         if (hash == _answer) {
             success = true;
         }
     }
-    
-    function isSolved() external view returns(bool) {
+
+    function isSolved() external view returns (bool) {
         return success;
     }
 }

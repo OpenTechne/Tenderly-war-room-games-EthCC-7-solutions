@@ -8,13 +8,13 @@ import "openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol
  * @dev Library used by the Core contract to deploy the challenge `MerkleAirDrop.sol`
  */
 library MerkleAirDropFactory {
-
-    bytes32 private constant EIP712DOMAIN_TYPEHASH = keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)");
+    bytes32 private constant EIP712DOMAIN_TYPEHASH =
+        keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)");
     bytes32 public constant DROP_TYPEHASH = keccak256("Drop(address user,uint256 amount,bool premium)");
 
     address public constant VICTIM_ADDRESS = 0x0000000000000000000000000000bEEFBeeFBeEF;
 
-    function deploy(address advAddress) external returns(ShinyToken) {
+    function deploy(address advAddress) external returns (ShinyToken) {
         ShinyToken token;
         bytes32[2] memory leafHash;
         bytes32 rootHash;
@@ -29,7 +29,7 @@ library MerkleAirDropFactory {
 
         return token;
     }
-    
+
     /**
      * @dev Sorts the pair (a, b) and hashes the result.
      */
@@ -49,13 +49,8 @@ library MerkleAirDropFactory {
         }
     }
 
-    function _hashDrop(address user, uint amount, bool premium, ShinyToken token) private view returns(bytes32) {
-        return _hashTypedDataV4(keccak256(abi.encode(
-            DROP_TYPEHASH,
-            user,
-            amount,
-            premium
-        )), token);
+    function _hashDrop(address user, uint256 amount, bool premium, ShinyToken token) private view returns (bytes32) {
+        return _hashTypedDataV4(keccak256(abi.encode(DROP_TYPEHASH, user, amount, premium)), token);
     }
 
     function _hashTypedDataV4(bytes32 structHash, ShinyToken token) internal view returns (bytes32) {
@@ -63,12 +58,8 @@ library MerkleAirDropFactory {
     }
 
     function _buildDomainSeparator(ShinyToken token) private view returns (bytes32) {
-        return keccak256(abi.encode(
-            EIP712DOMAIN_TYPEHASH, 
-            keccak256("MerkleAirDrop"), 
-            keccak256("1"), 
-            block.chainid, 
-            address(token)
-        ));
+        return keccak256(
+            abi.encode(EIP712DOMAIN_TYPEHASH, keccak256("MerkleAirDrop"), keccak256("1"), block.chainid, address(token))
+        );
     }
 }

@@ -8,18 +8,17 @@ import "./ISolvable.sol";
  * @dev You can see how this challenge was deployed by looking at `Core.sol`.
  */
 contract ABIOptimizooor is Solvable {
-
     bool solved;
 
-    function foo(uint[] calldata x, uint[] calldata y, uint[] calldata z) external {
+    function foo(uint256[] calldata x, uint256[] calldata y, uint256[] calldata z) external {
         assert(msg.data.length <= 196);
-        assert (x.length == 0);
-        assert (y.length == 2);
-        assert (z.length == 2);
+        assert(x.length == 0);
+        assert(y.length == 2);
+        assert(z.length == 2);
         solved = true;
     }
 
-    function isSolved() external view returns(bool) {
+    function isSolved() external view returns (bool) {
         return solved;
     }
 }

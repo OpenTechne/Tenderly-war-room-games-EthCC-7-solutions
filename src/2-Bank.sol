@@ -13,7 +13,7 @@ contract Bank is Solvable {
     event Registration(address wallet);
     event Deregistration(address wallet);
 
-    mapping(address => uint) public balances;
+    mapping(address => uint256) public balances;
     mapping(address => bool) public externalAccounts;
 
     error ContractAccount();
@@ -44,23 +44,20 @@ contract Bank is Solvable {
         emit Deregistration(msg.sender);
     }
 
-    function deposit(uint amount) external payable onlyRegWallets(msg.sender) {
+    function deposit(uint256 amount) external payable onlyRegWallets(msg.sender) {
         require(msg.value == amount, "Insufficient funds");
         balances[msg.sender] += amount;
     }
 
-    function depositFor(
-        address wallet,
-        uint amount
-    ) external payable onlyRegWallets(wallet) {
+    function depositFor(address wallet, uint256 amount) external payable onlyRegWallets(wallet) {
         require(msg.value == amount, "Insufficient funds");
         balances[wallet] += amount;
     }
 
     function withdraw() external onlyRegWallets(msg.sender) {
-        uint balance = balances[msg.sender];
+        uint256 balance = balances[msg.sender];
         require(balance > 0, "Nothing to withdraw");
-        (bool sent, ) = msg.sender.call{value: balance}("");
+        (bool sent,) = msg.sender.call{value: balance}("");
         require(sent, "Failed to send Ether");
         balances[msg.sender] = 0;
     }
@@ -75,7 +72,7 @@ contract Bank is Solvable {
         return (codehash != accountHash && codehash != 0x0);
     }
 
-    function isSolved() external view returns(bool) {
+    function isSolved() external view returns (bool) {
         return address(this).balance == 0;
     }
 }

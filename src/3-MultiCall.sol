@@ -5,7 +5,7 @@ import "openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 import "./ISolvable.sol";
 
 /**
-/**
+ * /**
  * @title MultiCall
  * @dev You can see how this challenge was deployed by looking at `Core.sol`.
  *
@@ -15,7 +15,7 @@ import "./ISolvable.sol";
  * The contract uses a proxy pattern.
  * The MulticallProxy contract is the proxy.
  * The MultiCall contract is the initial implementation.
- * 
+ *
  * The proxy has an admin that is allowed to change the implementation.
  * Anyone can propose a new admin, but only the admin can approve the proposal.
  *
@@ -51,7 +51,7 @@ contract MultiCallProxy is ERC1967Proxy, Solvable {
         admin = proposedAdmin;
     }
 
-    function isSolved() external view returns(bool) {
+    function isSolved() external view returns (bool) {
         return address(this).balance == 0;
     }
 }
@@ -102,7 +102,7 @@ contract MultiCall {
 
             require(selector != MultiCall.multicall.selector, "Multicall cannot call multicall");
 
-            (bool success, ) = address(this).delegatecall(data);
+            (bool success,) = address(this).delegatecall(data);
             require(success, "Error while delegating call");
 
             if (selector == MultiCall.deposit.selector) {
