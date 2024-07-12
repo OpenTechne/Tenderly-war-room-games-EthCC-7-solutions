@@ -12,6 +12,7 @@ contract HelloWorldTest is Test {
     }
 
     function test_solve() public {
+        helloWorld.answer("HelloWorld");
         assertTrue(helloWorld.isSolved());
     }
 }
